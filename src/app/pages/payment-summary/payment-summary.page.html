@@ -1,0 +1,27 @@
+<ion-content class="ion-padding">
+  <div class="summary-screen">
+    <!-- Filtros de reporte de ganancias -->
+    <div class="report-filters">
+      <ion-segment [(ngModel)]="currentPeriod" (ionChange)="onPeriodChange($event)">
+        <ion-segment-button value="day">Day</ion-segment-button>
+        <ion-segment-button value="week">Week</ion-segment-button>
+        <ion-segment-button value="month">Month</ion-segment-button>
+        <ion-segment-button value="year">Year</ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <!-- Visualización del reporte de ganancias -->
+    <div class="report-summary">
+      <ion-label class="summary-title">Total Earnings: ${{ totalEarnings }}</ion-label>
+      <div *ngFor="let report of reportData" class="report-item">
+        <ion-label>{{ report.date }} : ${{ report.earnings }}</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-tabs [navigation]="'payment-summary'"></app-tabs>
+  </ion-toolbar>
+</ion-footer>

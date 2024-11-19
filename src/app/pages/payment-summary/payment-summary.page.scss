@@ -1,0 +1,44 @@
+.summary-screen {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.report-filters {
+  margin: 15px 0;
+  text-align: center;
+}
+
+ion-segment-button {
+  font-weight: bold;
+  color: #000000; /* color de los botones */
+  --indicator-color: #dbafcf;
+}
+
+.report-summary {
+  padding: 20px;
+  background-color: #FDECEF;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+}
+
+.summary-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #6a3b59;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e0d6dd;
+}
+
+.report-item {
+  font-size: 1.1em;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #ffffff;
+  color: #6a3b59;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

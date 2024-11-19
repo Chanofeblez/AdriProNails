@@ -1,0 +1,94 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+
+
+/.sourcemaps
+/.versions
+/coverage
+
+# Ionic
+/.ionic
+/www
+/platforms
+/plugins
+/android
+/ios
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+
+# Miscellaneous
+/.angular
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+# Excluir módulos específicos en la carpeta pages
+src/app/pages/chats/
+src/app/pages/forgot-password/
+src/app/pages/inbox/
+src/app/pages/location/
+src/app/pages/near-by/
+src/app/pages/near-salon/
+src/app/pages/payment-modals/
+src/app/pages/popular-salon/
+src/app/pages/register/
+src/app/pages/salon-info/
+src/app/pages/search-location/
+src/app/pages/select-gender/
+src/app/pages/select-slot/
+src/app/pages/services/
+src/app/pages/services-list/
+src/app/pages/success-payments/
+src/app/pages/verify/
+src/app/pages/welcome/
+src/app/pages/write-reviews/
+src/app/services/util.service.ts
+

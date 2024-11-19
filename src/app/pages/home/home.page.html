@@ -1,0 +1,61 @@
+<ion-content class="ion-padding">
+  <div class="calendario-page">
+    <div class="calendario-header">
+      <button (click)="goToPreviousWeek()">Prev Week</button>
+      <span class="week-label">
+        {{ startOfWeek | date: 'MMM dd' }} - {{ endOfWeek | date: 'MMM dd' }}
+      </span>
+      <button (click)="goToNextWeek()">Next Week</button>
+    </div>
+
+    <div class="week-header">
+      <div class="day-header" *ngFor="let day of daysInWeek">
+        <div class="day-name">{{ day.date | date: 'EEE' }}</div>
+        <div class="day-date">{{ day.date | date: 'MMM d' }}</div>
+      </div>
+    </div>
+
+    <div class="calendar">
+      <div class="calendar-body">
+        <div class="hour-column">
+          <div class="hour-label" *ngFor="let hour of [].constructor(hourEnd - hourStart + 1); let i = index">
+            {{ formatHour(hourStart + i) }}
+          </div>
+        </div>
+
+        <div class="day-column" *ngFor="let day of daysInWeek">
+          <div class="day-body">
+            <div *ngFor="let hour of [].constructor(hourEnd - hourStart + 1); let i = index" class="hour">
+              <ng-container *ngFor="let event of events">
+                <div *ngIf="event.start.getHours() === hourStart + i && event.start.getDate() === day.date.getDate()"
+                  [ngClass]="event.cssClass" class="event" (click)="showPopover(event, $event.currentTarget)">
+                  {{ event.title }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popover de información del evento -->
+    <div *ngIf="selectedEvent" [ngClass]="selectedEvent.cssClass" class="popover" [style.top.px]="popoverPosition.y"
+      [style.left.px]="popoverPosition.x">
+      <p><strong>Nombre:</strong> {{ selectedEvent.title }}</p>
+      <p><strong>Hora:</strong> {{ formatHour(selectedEvent.start.getHours()) }} - {{
+        formatHour(selectedEvent.end.getHours()) }}</p>
+      <p><strong>Estado:</strong> {{ selectedEvent.status }}</p>
+      <button class="close-button" (click)="selectedEvent = null">Cerrar</button>
+      <button class="details-button" (click)="goToBookingInfo(selectedEvent.appointmentId)">Detalles</button>
+
+    </div>
+
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <app-tabs [navigation]="'home'"></app-tabs>
+  </ion-toolbar>
+</ion-footer>

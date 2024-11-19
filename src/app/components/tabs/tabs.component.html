@@ -1,0 +1,38 @@
+<div class="tabs-container1">
+  <div class="tab-data" (click)="onNavigate('appointments')">
+    <ion-icon
+      name="reader"
+      [ngClass]="navigation === 'appointments' ? 'active-icon' : 'simple-icon'"
+      [color]="navigation === 'appointments' ? 'light' : 'dark'">
+    </ion-icon>
+  </div>
+  <div class="tab-data" (click)="onNavigate('gallery')">
+    <ion-icon
+      name="images-outline"
+      [ngClass]="navigation === 'gallery' ? 'active-icon' : 'simple-icon'"
+      [color]="navigation === 'gallery' ? 'light' : 'dark'">
+    </ion-icon>
+  </div>
+  <div class="tab-data" (click)="onNavigate('home')">
+    <ion-icon
+      name="book-outline"
+      [ngClass]="navigation === 'home' ? 'active-icon' : 'simple-icon'"
+      [color]="navigation === 'home' ? 'light' : 'dark'">
+    </ion-icon>
+  </div>
+  <div class="tab-data" (click)="onNavigate('payment-summary')">
+    <ion-icon
+      name="wallet-outline"
+      [ngClass]="navigation === 'payment-summary' ? 'active-icon' : 'simple-icon'"
+      [color]="navigation === 'payment-summary' ? 'light' : 'dark'">
+    </ion-icon>
+  </div>
+  <div class="tab-data" (click)="onNavigate('accounts')">
+    <ion-icon
+      name="school-outline"
+      [ngClass]="navigation === 'accounts' ? 'active-icon' : 'simple-icon'"
+      [color]="navigation === 'accounts' ? 'light' : 'dark'">
+    </ion-icon>
+  </div>
+</div>
+

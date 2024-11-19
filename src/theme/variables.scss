@@ -1,0 +1,73 @@
+:root {
+  /** primary **/
+  --ion-color-primary: #FDECEF;
+  --ion-color-primary-rgb: 253, 236, 239;
+  --ion-color-primary-contrast: #4D2C3D; /* Contraste oscuro */
+  --ion-color-primary-contrast-rgb: 77, 44, 61;
+  --ion-color-primary-shade: #EACDD1; /* Versión más oscura */
+  --ion-color-primary-tint: #FFEFF3; /* Versión más clara */
+
+  /** secondary **/
+  --ion-color-secondary: #F8D5E3;
+  --ion-color-secondary-rgb: 248, 213, 227;
+  --ion-color-secondary-contrast: #4D2C3D;
+  --ion-color-secondary-contrast-rgb: 77, 44, 61;
+  --ion-color-secondary-shade: #E5BCCF;
+  --ion-color-secondary-tint: #FAE1EB;
+
+  /** tertiary **/
+  --ion-color-tertiary: #C9B6E5;
+  --ion-color-tertiary-rgb: 201, 182, 229;
+  --ion-color-tertiary-contrast: #FFFFFF;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #B3A2CE;
+  --ion-color-tertiary-tint: #D8C5F0;
+
+  /** success **/
+  --ion-color-success: #A8E6CF;
+  --ion-color-success-rgb: 168, 230, 207;
+  --ion-color-success-contrast: #2A4D3A;
+  --ion-color-success-contrast-rgb: 42, 77, 58;
+  --ion-color-success-shade: #91CCB5;
+  --ion-color-success-tint: #B9EAD7;
+
+  /** warning **/
+  --ion-color-warning: #F9E79F;
+  --ion-color-warning-rgb: 249, 231, 159;
+  --ion-color-warning-contrast: #5E4D12;
+  --ion-color-warning-contrast-rgb: 94, 77, 18;
+  --ion-color-warning-shade: #E6CF8F;
+  --ion-color-warning-tint: #FAEBB1;
+
+  /** danger **/
+  --ion-color-danger: #F7A8B8;
+  --ion-color-danger-rgb: 247, 168, 184;
+  --ion-color-danger-contrast: #5E2C35;
+  --ion-color-danger-contrast-rgb: 94, 44, 53;
+  --ion-color-danger-shade: #DC8E9E;
+  --ion-color-danger-tint: #F9B8C5;
+
+  /** dark **/
+  --ion-color-dark: #4D2C3D; /* Tono oscuro para contrastes */
+  --ion-color-dark-rgb: 77, 44, 61;
+  --ion-color-dark-contrast: #FDECEF;
+  --ion-color-dark-contrast-rgb: 253, 236, 239;
+  --ion-color-dark-shade: #3D2230;
+  --ion-color-dark-tint: #5C3F4F;
+
+  /** medium **/
+  --ion-color-medium: #C8C8C8; /* Tono neutro */
+  --ion-color-medium-rgb: 200, 200, 200;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #A8A8A8;
+  --ion-color-medium-tint: #D8D8D8;
+
+  /** light **/
+  --ion-color-light: #FFFFFF; /* Fondo neutro claro */
+  --ion-color-light-rgb: 255, 255, 255;
+  --ion-color-light-contrast: #4D2C3D;
+  --ion-color-light-contrast-rgb: 77, 44, 61;
+  --ion-color-light-shade: #F5F5F5;
+  --ion-color-light-tint: #FFFFFF;
+}

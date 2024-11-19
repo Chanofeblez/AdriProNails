@@ -1,0 +1,31 @@
+.tabs-container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fdecef;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-data {
+  flex: 1;
+  text-align: center;
+}
+
+.active-icon {
+  font-size: 1.8rem;
+  padding: 8px;
+  background-color: #607d8b; /* Azul oscuro para diferenciarlo */
+  color: #ffffff; /* Color del ícono activo */
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.simple-icon {
+  font-size: 1.5rem;
+  color: #666666; /* Ícono desactivado */
+}
+

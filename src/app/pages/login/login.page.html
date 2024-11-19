@@ -1,0 +1,22 @@
+<ion-content class="ion-padding">
+  <div class="login-screen">
+    <ion-label class="title">Welcome Back</ion-label>
+    <ion-label class="sub-title">Sign in now to begin an amazing journey</ion-label>
+
+    <ion-item lines="none" class="item-input">
+      <ion-input placeholder="Email" type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-input">
+      <ion-input placeholder="Password" [type]="passwordView ? 'text' : 'password'" [(ngModel)]="password"></ion-input>
+      <ion-icon slot="end" [name]="passwordView ? 'eye-off-outline' : 'eye-outline'" (click)="togglePassword()"></ion-icon>
+    </ion-item>
+
+    <div class="primary-btn1 login-btn" (click)="onLogin()">
+      <ion-label class="lbl">Sign In</ion-label>
+    </div>
+  </div>
+
+  <ion-label *ngIf="errorMessage" color="danger">{{ errorMessage }}</ion-label>
+
+</ion-content>

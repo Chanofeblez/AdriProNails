@@ -1,0 +1,26 @@
+<ion-content class="ion-padding">
+  <div class="summary-screen">
+    <!-- Header -->
+    <div class="header">
+      <h1>Customer Course Purchases</h1>
+      <p>List of all customers and the courses they have purchased.</p>
+    </div>
+
+    <!-- Customer List -->
+    <div *ngFor="let customer of customersWithCourses"
+         class="customer-card"
+         (click)="goToCustomerInfo(customer.customerId , customer.customerEmail)">
+      <ion-label class="customer-name">{{ customer.customerName }}</ion-label>
+      <div *ngFor="let course of customer.courses" class="course-item">
+        <ion-icon name="school-outline" class="course-icon"></ion-icon>
+        <ion-label class="course-title">{{ course.title }}</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-tabs [navigation]="'accounts'"></app-tabs>
+  </ion-toolbar>
+</ion-footer>

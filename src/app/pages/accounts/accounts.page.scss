@@ -1,0 +1,64 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : Salon - 2 This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+*/
+.summary-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a36d7a; /* Ajusta el color a los colores de tu app */
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.customer-card {
+  background-color: #f7f7f7; /* Fondo claro para la tarjeta del cliente */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.course-icon {
+  color: #a36d7a; /* Color del icono acorde a la app */
+  margin-right: 10px;
+}
+
+.course-title {
+  font-size: 1rem;
+  color: #555;
+}
+

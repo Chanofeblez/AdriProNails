@@ -1,0 +1,113 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : Salon - 2 This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+-->
+<ion-content class="ion-padding no-border">
+  <div class="align-center">
+      <ion-button color="dark" class="back-button" (click)="onBack()">
+        <ion-icon slot="start" name="chevron-back"></ion-icon>
+        Back
+      </ion-button>
+  </div>
+
+  <div class="summary-screen">
+    <div class="salon-list" *ngIf="appointment">
+      <ion-row class="row-content">
+        <ion-col size="3">
+          <div class="cover" [ngStyle]="{'background-image': 'url(' + appointment.imagePath + ')'}"></div>
+        </ion-col>
+        <ion-col size="9">
+          <div class="content">
+            <div class="title-content-bottom">
+              <ion-label class="tittle">{{ appointment.serviceName }}</ion-label>
+            </div>
+            <!-- <ion-badge [color]="getStatusColor(appointment.status)">
+              {{ appointment.status }}
+            </ion-badge> -->
+            <!-- Botones de Aceptar y Cancelar -->
+            <div class="button-group" *ngIf="appointment.status=='PENDING'">
+              <button class="accept" (click)="updateStatus(AppointmentStatus.CONFIRMED)">Aceptar</button>
+              <button class="cancel" (click)="updateStatus(AppointmentStatus.CANCELED)">Cancelar</button>
+            </div>
+            <div class="button-group" *ngIf="appointment.status=='CONFIRMED'">
+              <button class="cancel" (click)="updateStatus(AppointmentStatus.CANCELED)">Cancelar</button>
+            </div>
+
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="info-box">
+      <div class="info-row">
+        <div class="info-label">Date & Time:</div>
+        <div class="info-value">{{formattedAppointmentDateTime}}</div>
+      </div>
+    </div>
+
+    <div class="info-box" (click)="goToCustomerInfo(nombre)">
+      <div class="info-row">
+        <div class="info-label">Name:</div>
+        <div class="info-value">{{ nombre?.name }}</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">PhoneNumber:</div>
+        <div class="info-value">{{ nombre?.phoneNumber }}</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">Email:</div>
+        <div class="info-value">{{ nombre?.email }}</div>
+      </div>
+    </div>
+
+
+    <div class="box-content">
+      <div class="top-content">
+        <ion-label class="info-label">Service Details</ion-label>
+      </div>
+      <div class="content">
+        <!-- Servicio principal -->
+        <div class="services-list-item">
+          <div class="name">
+            {{ serviceDetails?.name }}
+          </div>
+          <div class="price">
+            {{ serviceDetails?.price | currency: 'USD' }}
+          </div>
+        </div>
+
+        <!-- Variantes de servicios -->
+        <div *ngFor="let item of variants">
+          <div class="services-list-item">
+            <div class="name">
+              {{ item?.name }}
+            </div>
+            <div class="price">
+              {{ item?.price | currency: 'USD' }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Precio total -->
+        <div class="total-item-price">
+          <ion-label class="title">Total Price</ion-label>
+          <ion-label class="price">{{ totalPrice | currency: 'USD' }}</ion-label>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="appointment">
+      <div class="info-box1">
+        <div class="info-row">
+          <div class="info-label">Review:</div>
+          <div class="info-value">{{ appointment.review?.reviewText || 'No Review' }}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

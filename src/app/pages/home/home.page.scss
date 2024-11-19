@@ -1,0 +1,205 @@
+/* ALL */
+.calendario-page {
+  height: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: #ffffff;
+  padding: 0;
+  border-radius: 12px;
+}
+
+/* PREVIOUS AND NEXT AREA */
+.calendario-header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.calendario-header button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+.week-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 5px;
+}
+
+/* DAYS AREA */
+.week-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  margin-left: 50px;
+}
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.day-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.day-date {
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* CALENDAR */
+.calendar-body {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.hour-column {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  background-color: #f0f0f0;
+}
+
+.hour-label {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.day-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-body {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+}
+
+.hour {
+  position: relative;
+  height: 80px;
+  margin-left: 4px;
+}
+
+.event {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 0;
+  bottom: 0;
+  height: 197%;
+  background-color: #d1e8ff;
+  border: 1px solid #1e90ff;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 9px;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Oculta texto desbordante */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es muy largo */
+}
+
+/* Evento pendiente (azul) */
+.appointment-pending {
+  background-color: #d1e8ff;
+  border: 1px solid #1e90ff;
+  color: #000000;
+}
+
+/* Evento confirmado (morado) */
+.appointment-confirmed {
+  background-color: #e8d1ff;
+  border: 1px solid #8a2be2;
+  color: #050505;
+}
+
+/* Evento completado (verde) */
+.appointment-completed {
+  background-color: #d1ffe8;
+  border: 1px solid #32cd32;
+  color: #000000;
+}
+
+.calendario-page {
+  position: relative;
+}
+
+.popover {
+  position: absolute;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.popover p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.popover button {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.popover button:hover {
+  background-color: #e0e0e0;
+}
+
+.popover button:focus {
+  outline: none;
+}
+
+.popover .close-button {
+  background-color: #ffcccc;
+  color: #a94442;
+}
+
+.popover .details-button {
+  background-color: #cce5ff;
+  color: #31708f;
+}
