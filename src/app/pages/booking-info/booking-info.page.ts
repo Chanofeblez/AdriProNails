@@ -13,7 +13,6 @@ import { Servicio, ServicioVariant } from 'src/app/models/servicios.interface';
 import { AppointmentService } from 'src/app/services/appointment.service';
 import { CustomerService } from 'src/app/services/customer.service';
 import { ServiciosService } from 'src/app/services/servicios.service';
-import { UtilService } from 'src/app/services/util.service';
 import { VariantsService } from 'src/app/services/variants.service';
 
 @Component({

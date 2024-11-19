@@ -8,7 +8,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { UtilService } from 'src/app/services/util.service';
 
 @Component({
   selector: 'app-login',

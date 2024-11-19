@@ -7,8 +7,6 @@
 */
 import { Component, inject, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { UtilService } from 'src/app/services/util.service';
-import { WriteReviewsPage } from '../write-reviews/write-reviews.page';
 import { Appointment, AppointmentStatus } from 'src/app/models/appointment.interface';
 import { CustomerInterface } from 'src/app/models/customer.interface';
 import { AppointmentService } from 'src/app/services/appointment.service';
@@ -181,13 +179,13 @@ private updateAppointmentStatus(appointment: Appointment): Promise<void> {
   }
 
 
-  async openReviews() {
-    const modal = await this.modalController.create({
-      component: WriteReviewsPage,
-      cssClass: 'payment-modal'
-    });
-    await modal.present();
-  }
+ // async openReviews() {
+ //   const modal = await this.modalController.create({
+ //     component: WriteReviewsPage,
+ //     cssClass: 'payment-modal'
+ //   });
+ //   await modal.present();
+ // }
 
   formatAppointmentTime(time: string): string {
     const [hours, minutes] = time.split(':').map(Number); // Dividimos la hora y los minutos
