@@ -91,4 +91,6 @@ src/app/pages/verify/
 src/app/pages/welcome/
 src/app/pages/write-reviews/
 src/app/services/util.service.ts
+date-fns/
+
 
