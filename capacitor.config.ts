@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.initappz.capacitor.marketplace.salon.two',
-  appName: 'Salon 2',
+  appId: 'com.adrinailsdesign.adripronails',
+  appName: 'AdriProNails',
   webDir: 'www',
   server: {
     androidScheme: 'https'
