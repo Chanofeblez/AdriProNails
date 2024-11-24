@@ -14,9 +14,10 @@ import { CustomerService } from 'src/app/services/customer.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-appointments',
-  templateUrl: './appointments.page.html',
-  styleUrls: ['./appointments.page.scss'],
+    selector: 'app-appointments',
+    templateUrl: './appointments.page.html',
+    styleUrls: ['./appointments.page.scss'],
+    standalone: false
 })
 export class AppointmentsPage {
 

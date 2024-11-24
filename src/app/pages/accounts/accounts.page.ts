@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
-  selector: 'app-accounts',
-  templateUrl: './accounts.page.html',
-  styleUrls: ['./accounts.page.scss'],
+    selector: 'app-accounts',
+    templateUrl: './accounts.page.html',
+    styleUrls: ['./accounts.page.scss'],
+    standalone: false
 })
 export class AccountsPage implements OnInit {
 

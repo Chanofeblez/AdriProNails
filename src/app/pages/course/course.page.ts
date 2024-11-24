@@ -3,9 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CourseService } from 'src/app/services/course.service';
 
 @Component({
-  selector: 'app-course',
-  templateUrl: './course.page.html',
-  styleUrls: ['./course.page.scss'],
+    selector: 'app-course',
+    templateUrl: './course.page.html',
+    styleUrls: ['./course.page.scss'],
+    standalone: false
 })
 export class CoursePage implements OnInit {
 

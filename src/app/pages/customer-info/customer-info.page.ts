@@ -5,9 +5,10 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
-  selector: 'app-customer-info',
-  templateUrl: './customer-info.page.html',
-  styleUrls: ['./customer-info.page.scss'],
+    selector: 'app-customer-info',
+    templateUrl: './customer-info.page.html',
+    styleUrls: ['./customer-info.page.scss'],
+    standalone: false
 })
 export class CustomerInfoPage implements OnInit {
 

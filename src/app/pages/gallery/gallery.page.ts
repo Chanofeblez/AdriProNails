@@ -4,9 +4,10 @@ import { Image } from 'src/app/models/image.interface';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.page.html',
-  styleUrls: ['./gallery.page.scss'],
+    selector: 'app-gallery',
+    templateUrl: './gallery.page.html',
+    styleUrls: ['./gallery.page.scss'],
+    standalone: false
 })
 export class GalleryPage implements OnInit {
 

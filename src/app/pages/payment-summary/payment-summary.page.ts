@@ -10,9 +10,10 @@ import { Appointment } from 'src/app/models/appointment.interface';
 import { AppointmentService } from 'src/app/services/appointment.service';
 
 @Component({
-  selector: 'app-payment-summary',
-  templateUrl: './payment-summary.page.html',
-  styleUrls: ['./payment-summary.page.scss'],
+    selector: 'app-payment-summary',
+    templateUrl: './payment-summary.page.html',
+    styleUrls: ['./payment-summary.page.scss'],
+    standalone: false
 })
 export class PaymentSummaryPage implements OnInit {
 

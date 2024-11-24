@@ -16,9 +16,10 @@ import { ServiciosService } from 'src/app/services/servicios.service';
 import { VariantsService } from 'src/app/services/variants.service';
 
 @Component({
-  selector: 'app-booking-info',
-  templateUrl: './booking-info.page.html',
-  styleUrls: ['./booking-info.page.scss'],
+    selector: 'app-booking-info',
+    templateUrl: './booking-info.page.html',
+    styleUrls: ['./booking-info.page.scss'],
+    standalone: false
 })
 export class BookingInfoPage implements OnInit {
 
